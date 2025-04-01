@@ -37,9 +37,9 @@ const MemberProfile: React.FC<MemberProfileProps> = ({
     profilePictureUrl,
   }) => {
     return (
-      <div className="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-lg">
+      <div className="max-w-4xl mx-auto p-6 ">
         {/* Flex Container for Image + Info */}
-        <div className="flex bg-[#2994b2] p-6 rounded-t-lg text-white">
+        <div className="flex bg-[#2994b2] p-8 rounded-t-lg text-white">
           {/* Image Section: Allow it to be tall but maintain aspect ratio */}
           <div className="w-1/3 flex items-start">
           {profilePictureUrl ? (
@@ -98,14 +98,14 @@ const MemberProfile: React.FC<MemberProfileProps> = ({
         </div>
   
         {/* Biography Directly Below (Fixes White Space Issue) */}
-        <div className="p-6 bg-[#2994b2] text-white -mt-2">
+        <div className="p-8 bg-[#2994b2] text-white -mt-2">
           <h3 className="text-xl font-bold">Biography</h3>
           <p className="text-md mt-2">
             {bio}
           </p>
         </div>
 
-        <div className="p-6 bg-[#2994b2] text-white rounded-b-lg shadow-md">
+        <div className="p-8 bg-[#2994b2] text-white rounded-b-lg shadow-md">
         <h3 className="text-xl font-bold">Research Project</h3>
         <p className="text-md mt-2">{research_project || <span className="italic text-gray-600">No research project listed.</span>}</p>
       </div>
