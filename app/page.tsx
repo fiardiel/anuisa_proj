@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button";
-
 export default function Home() {
   return (
     <div className="p-10">
@@ -11,7 +9,7 @@ export default function Home() {
           Indonesian Students Association
         </p>
         <p className="mt-5 w-3/5">
-          The Australian National University Indonesian Students' Association (ANUISA) is a student-led organization
+          The Australian National University Indonesian Students&apos; Association (ANUISA) is a student-led organization
           that serves as a home for Indonesian students at the Australian National University (ANU). It aims to foster
           a strong sense of community among Indonesian students while also promoting Indonesian culture and heritage
           within the broader ANU community.
