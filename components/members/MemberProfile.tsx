@@ -84,12 +84,12 @@ const MemberProfile: React.FC<MemberProfileProps> = ({
               <div className="flex gap-3 mt-2">
                 {instagram && (
                   <a href={instagram} target="_blank" rel="noopener noreferrer">
-                    <Image src="/instagram-icon.png" alt="Instagram" width={24} height={24} />
+                    <Image src="/icons8-instagram-50.png" alt="Instagram" width={24} height={24} />
                   </a>
                 )}
                 {linkedin && (
                   <a href={linkedin} target="_blank" rel="noopener noreferrer">
-                    <Image src="/linkedin-icon.png" alt="LinkedIn" width={24} height={24} />
+                    <Image src="/icons8-linkedin-50.png" alt="LinkedIn" width={24} height={24} />
                   </a>
                 )}
               </div>
