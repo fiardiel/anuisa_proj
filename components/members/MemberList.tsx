@@ -8,7 +8,7 @@ const MemberList = async () => {
     <div className='grid md:grid-cols-2 xl:grid-cols-3 gap-10 mt-10'>
       {members.map((member, index) => (
         <div>
-          <MemberCard color={index % 2 === 0 ? 'blue' : 'orange'} key={member.uni_id} image={member.profile_picture_url} full_name = {member.full_name} program={member.program}/>
+          <MemberCard color={index % 2 === 0 ? 'blue' : 'orange'} key={member.uni_id} image={member.profile_picture_url} full_name={member.full_name} program={member.program} />
         </div>
       ))}
     </div>
