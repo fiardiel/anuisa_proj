@@ -24,7 +24,7 @@ const Navbar = () => {
       <div>
         <div className='block sm:hidden'>
         <Drawer direction="top">
-          <DrawerTrigger className="relative flex h-10 flex-shrink-0 items-center justify-center gap-2 overflow-hidden rounded-full px-4 text-sm font-medium shadow-sm transition-all hover:bg-[#FAFAFA] dark:bg-[#161615] dark:hover:bg-[#1A1A19] dark:text-white">
+          <DrawerTrigger className="relative flex h-10 flex-shrink-0 items-center justify-center gap-2 overflow-hidden rounded-full px-4 text-sm font-medium shadow-sm transition-all hover:bg-[#fffae0] dark:bg-[#161615] dark:hover:bg-[#1A1A19] dark:text-white">
             <Menu />
           </DrawerTrigger>
           <DrawerOverlay className="fixed inset-0 bg-black/40 transition-all duration-500 ease-in-out" />
