@@ -1,36 +1,44 @@
 'use server'
 
 import { supabase } from '@/lib/supabaseClient'
-import type { MemberProfileProps } from '@/components//members/MemberProfile'
+import type { MemberProfileProps } from '@/components/members/MemberProfile'
 
 const fetchMember = async (uniId: string): Promise<MemberProfileProps | null> => {
   try {
-    const { data, error } = await supabase
+    // Fetch the member profile
+    const { data: profileData, error: profileError } = await supabase
       .from('profile')
-      .select('full_name, nickname, uni_id, program, school, college, other_degrees, career_interests, expertise, email, instagram, linkedin, bio, research_project')
+      .select('full_name, nickname, uni_id, program, school, college, other_degrees, career_interests, expertise, email, instagram, linkedin, bio')
       .eq('uni_id', uniId)
-      .single() // Fetch a single record
+      .single()
 
-    if (error) throw error
+    if (profileError) throw profileError
+    if (!profileData) return null
 
-    if (!data) return null
+    // Fetch only the "research" field from the research_project table
+    const { data: researchData, error: researchError } = await supabase
+      .from('research_project')
+      .select('research')
+      .eq('researcher', uniId)
+
+    if (researchError) throw researchError
 
     return {
-      name: data.full_name,
-      nickname: data.nickname,
-      uniId: data.uni_id,
-      degree: data.program,
-      school: data.school,
-      college: data.college,
-      other_programs: data.other_degrees,
-      interests: data.career_interests,
-      expertise: data.expertise,
-      email: data.email,
-      instagram: data.instagram || '',
-      linkedin: data.linkedin || '',
-      bio: data.bio,
-      research_project: data.research_project,
-      profilePictureUrl: `https://qcjsnfklkapuequkkdvh.supabase.co/storage/v1/object/public/anuisa-profile-pictures/${data.uni_id}.png`,
+      name: profileData.full_name,
+      nickname: profileData.nickname,
+      uniId: profileData.uni_id,
+      degree: profileData.program,
+      school: profileData.school,
+      college: profileData.college,
+      other_programs: profileData.other_degrees,
+      interests: profileData.career_interests,
+      expertise: profileData.expertise,
+      email: profileData.email,
+      instagram: profileData.instagram || '',
+      linkedin: profileData.linkedin || '',
+      bio: profileData.bio,
+      research_projects: researchData.map((r) => r.research), 
+      profilePictureUrl: `https://qcjsnfklkapuequkkdvh.supabase.co/storage/v1/object/public/anuisa-profile-pictures/${profileData.uni_id}.png`,
     }
   } catch (err) {
     console.error('Error fetching member:', err)

@@ -1,23 +1,26 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 
 export interface MemberProfileProps {
-  name: string;
-  nickname: string;
-  uniId: string;
-  degree: string;
-  school: string;
-  college: string;
-  other_programs: string;
-  interests: string;
-  expertise: string;
-  email: string;
-  instagram?: string;
-  linkedin?: string;
-  bio: string;
-  research_project: string;
-  profilePictureUrl?: string; // Make this optional to avoid crashes
-}
+    name: string;
+    nickname: string;
+    uniId: string;
+    degree: string;
+    school: string;
+    college: string;
+    other_programs: string;
+    interests: string;
+    expertise: string;
+    email: string;
+    instagram?: string;
+    linkedin?: string;
+    bio: string;
+    research_projects: string[]; // Array of research titles
+    profilePictureUrl?: string;
+  }
 
 const MemberProfile: React.FC<MemberProfileProps> = ({
     name,
@@ -33,13 +36,17 @@ const MemberProfile: React.FC<MemberProfileProps> = ({
     instagram,
     linkedin,
     bio,
-    research_project,
+    research_projects,
     profilePictureUrl,
   }) => {
+    const searchParams = useSearchParams();
+    const color = searchParams.get("color") as "orange" | "blue" || "blue"; 
+
+    const bgColor = color === "orange" ? "bg-[#f29727]" : "bg-[#2994b2]";
     return (
       <div className="max-w-4xl mx-auto p-6 ">
         {/* Flex Container for Image + Info */}
-        <div className="flex bg-[#2994b2] p-8 rounded-t-lg text-white">
+        <div className={`flex ${bgColor} p-8 rounded-t-lg text-white`}>
           {/* Image Section: Allow it to be tall but maintain aspect ratio */}
           <div className="w-1/3 flex items-start">
           {profilePictureUrl ? (
@@ -49,7 +56,7 @@ const MemberProfile: React.FC<MemberProfileProps> = ({
               width={250}
               height={250}
               className="rounded-lg"
-              unoptimized // Important for external URLs
+              unoptimized 
             />
           ) : (
             <div className="w-[150px] h-[150px] bg-gray-300 rounded-lg flex items-center justify-center">
@@ -98,17 +105,25 @@ const MemberProfile: React.FC<MemberProfileProps> = ({
         </div>
   
         {/* Biography Directly Below (Fixes White Space Issue) */}
-        <div className="p-8 bg-[#2994b2] text-white -mt-2">
+        <div className={`p-8 ${bgColor} text-white -mt-2`}>
           <h3 className="text-xl font-bold">Biography</h3>
           <p className="text-md mt-2">
             {bio}
           </p>
         </div>
 
-        <div className="p-8 bg-[#2994b2] text-white rounded-b-lg shadow-md">
-        <h3 className="text-xl font-bold">Research Project</h3>
-        <p className="text-md mt-2">{research_project || <span className="italic text-gray-600">No research project listed.</span>}</p>
-      </div>
+        <div className={`p-8 ${bgColor} text-white rounded-b-lg shadow-md`}>
+            <h3 className="text-xl font-bold">Research Projects</h3>
+            {research_projects.length > 0 ? (
+                <ol className="mt-2 space-y-3 list-decimal list-inside">
+                {research_projects.map((research, index) => (
+                    <li key={index} className="text-md">{research}</li>
+                ))}
+                </ol>
+            ) : (
+                <p className="italic text-gray-300">No research projects listed.</p>
+            )}
+        </div>
       </div>
     );
   };
