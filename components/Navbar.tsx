@@ -17,7 +17,7 @@ import {
 
 const Navbar = () => {
   return (
-    <div className='flex sticky top-0 justify-between border-t-gray-50 bg-[#f29727] w-full h-20 items-center p-10 rounded-b-2xl'>
+    <div className='flex sticky top-0 justify-between border-t-gray-50 bg-[#bf872b] w-full h-20 items-center p-10 rounded-b-2xl'>
       <div>
         <Image src="/logo.png" alt="logo" width={125} height={125} />
       </div>
