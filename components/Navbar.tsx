@@ -14,6 +14,7 @@ import {
   DrawerPortal,
   DrawerOverlay
 } from "@/components/ui/drawer"
+import Link from 'next/link'
 
 const Navbar = () => {
   return (
@@ -60,6 +61,8 @@ const Navbar = () => {
             <Link href={'/members'}>Members</Link>
           </Button>
         </div>
+      </div>
+    </div>
   )
 }
 
