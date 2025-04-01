@@ -17,7 +17,7 @@ export default function Home() {
           within the broader ANU community.
         </p>
         <div className="mt-20">
-          <button className="bg-[#f29727] text-black font-semibold py-3 px-5 rounded-full">
+          <button className="bg-[#bf872b] text-black font-semibold py-3 px-5 rounded-full">
             About us
           </button>
         </div>
