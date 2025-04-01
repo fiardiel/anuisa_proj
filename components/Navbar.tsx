@@ -19,7 +19,9 @@ const Navbar = () => {
   return (
     <div className='flex sticky top-0 justify-between border-t-gray-50 bg-[#bf872b] w-full h-20 items-center p-10 rounded-b-2xl'>
       <div>
-        <Image src="/logo.png" alt="logo" width={125} height={125} />
+        <Link href={'/'}>
+          <Image src="/logo.png" alt="logo" width={125} height={125} />
+        </Link>
       </div>
       <div>
         <div className='block sm:hidden'>
@@ -33,21 +35,31 @@ const Navbar = () => {
           >
               <div className="p-8 flex flex-col justify-between items-center">
                 <div className="max-w-md mx-auto ">
-                    <Button variant={'link'} className='text-lg font-medium'>About Us</Button>
-                    <Button variant={'link'} className='text-lg font-medium'>Events</Button>
-                    <Button variant={'link'} className='text-lg font-medium'>Members</Button>
+                    <Button asChild variant={'link'} className='text-lg font-medium'>
+                      <Link href={'/aboutus'}>About Us</Link>
+                    </Button>
+                    <Button asChild variant={'link'} className='text-lg font-medium'>
+                      <Link href={'/events'}>Events</Link>
+                    </Button>
+                    <Button asChild variant={'link'} className='text-lg font-medium'>
+                      <Link href={'/members'}>Members</Link>
+                    </Button>
                 </div>
               </div>
             </DrawerContent>
         </Drawer>
         </div>
         <div className='hidden sm:flex gap-3'>
-          <Button variant={'link'} className='text-lg font-medium'>About Us</Button>
-          <Button variant={'link'} className='text-lg font-medium'>Events</Button>
-          <Button variant={'link'} className='text-lg font-medium'>Members</Button>
+          <Button asChild variant={'link'} className='text-lg font-medium'>
+          <Link href={'/aboutus'}>About Us</Link>
+          </Button>
+          <Button asChild variant={'link'} className='text-lg font-medium'>
+            <Link href={'/events'}>Events</Link>
+          </Button>
+          <Button asChild variant={'link'} className='text-lg font-medium'>
+            <Link href={'/members'}>Members</Link>
+          </Button>
         </div>
-      </div>
-    </div>
   )
 }
 
