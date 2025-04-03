@@ -30,44 +30,45 @@ const MembersDescription: React.FC<MembersDescriptionProps> = ({
     research_projects,
   }) => {
     return (
-      <div className="w-3/4 items-center justify-center mx-auto ">
+      <div className="w-4/5 md:w-3/5 items-center justify-center mx-auto ">
         {/* Biography Directly Below (Fixes White Space Issue) */}
         <div className={`p-8 bg-white text-black`}>
-          <h3 className="text-xl font-bold">Biography</h3>
-          <p className="text-md mt-2">
+          <h3 className="text-2xl font-bold">Biography</h3>
+          <p className="text-xl mt-4">
             {bio}
           </p>
         </div>
 
-        <div className="w-2/3 flex flex-col justify-between p-8 bg-white text-black">
+        <div className="flex flex-col justify-between p-8 bg-white text-black">
+        <h3 className="text-2xl font-bold mb-4">Profile</h3>
           <div>
-            <p className="text-lg font-semibold">{`(${nickname}) - ${uniId}`}</p>
-            <p className="text-md font-semibold">{college}</p>
+            <p className="text-xl ">{`(${nickname}) - ${uniId}`}</p>
+            <p className="text-xl ">{college}</p>
             <div className="flex gap-2 mt-2">
-            <p className="text-md font-semibold">{degree}</p>
+            <p className="text-xl ">{degree}</p>
             <span></span> {/* Divider */}
-            <p className="text-md font-semibold">{school}</p>
+            <p className="text-xl ">{school}</p>
           </div>
-            <p className="text-md">{other_programs}</p>
-            <p className="text-md font-semibold mt-2">
+            <p className="text-xl">{other_programs}</p>
+            <p className="text-xl  mt-2">
               <strong>Career Interests:</strong> {interests}
             </p>
-            <p className="text-md font-semibold">
+            <p className="text-xl ">
               <strong>Area of Expertise:</strong> {expertise}
             </p>
           </div>
         </div>
 
         <div className={`p-8 bg-white text-black rounded-b-lg shadow-md`}>
-            <h3 className="text-xl font-bold">Research Projects</h3>
+            <h3 className="text-2xl font-bold mb-4">Research Projects</h3>
             {research_projects.length > 0 ? (
                 <ol className="mt-2 space-y-3 list-decimal list-inside">
                 {research_projects.map((research, index) => (
-                    <li key={index} className="text-md">{research}</li>
+                    <li key={index} className="text-xl">{research}</li>
                 ))}
                 </ol>
             ) : (
-                <p className="italic text-gray-300">No research projects listed.</p>
+                <p className="italic text-gray-700">No research projects listed.</p>
             )}
         </div>
       </div>
