@@ -40,9 +40,9 @@ const MemberProfile: React.FC<MemberProfileProps> = ({
     profilePictureUrl,
   }) => {
     const searchParams = useSearchParams();
-    const color = searchParams.get("color") as "orange" | "blue" || "blue"; 
+    const color = searchParams.get("color") as "bg-black" | "bg-black" || "bg-black"; 
 
-    const bgColor = color === "orange" ? "bg-[#f29727]" : "bg-[#2994b2]";
+    const bgColor = color === "bg-black" ? "bg-black" : "bg-black";
     return (
       <div className="max-w-4xl mx-auto p-6 ">
         {/* Flex Container for Image + Info */}

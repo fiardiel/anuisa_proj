@@ -22,8 +22,8 @@ const MemberCard: React.FC<MemberCardProps> = ({ uni_id, color, image, full_name
   return (
     <Link href={`/members/${uni_id}?color=${color}`} passHref className="block">
     <div className='flex'>
-      <Image className='rounded-l-lg  object-cover' src={image} alt='Rafi' width={200} height={200} />
-      <Card className={cn('w-full', 'rounded-l-none', 'border-none', color === 'orange' ? 'bg-[#f29727]' : 'bg-[#2994b2]')}>
+      <Image className='rounded-none  object-cover' src={image} alt='Rafi' width={200} height={200} />
+      <Card className={cn('w-full', 'rounded-none', 'border-none', color === 'orange' ? 'bg-black' : 'bg-black')}>
         <CardContent>
           <CardTitle className='text-3xl font-bold text-white pt-6'>{full_name}</CardTitle>
         </CardContent>
