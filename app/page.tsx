@@ -17,12 +17,16 @@ export default async function Home() {
           Through this platform, ANUISA seeks to connect Indonesian talents within the ANU community to industry and beyond, while fostering employability and idea exchange.
         </p>
         <div className="mt-20">
-          <button className="bg-[#bf872b] text-black font-semibold py-3 px-5 rounded-full">
-            About us
-          </button>
         </div>
         <div className='p-10 mt-10'>
-          <h1 className='text-5xl font-semibold'>Talents</h1>
+        <div className="relative flex items-center justify-center w-full">
+          <hr className="w-full h-1 my-8 bg-gray-200 border-0 rounded-sm dark:bg-gray-700" />
+          <div className="absolute px-4 bg-white dark:bg-gray-900">
+              <h1 className="text-5xl font-semibold whitespace-nowrap">
+          Meet Indonesian Talents at ANU
+              </h1>
+          </div>
+        </div>
             <div>
               <MemberList members={members} />
             </div>
