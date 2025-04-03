@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 
@@ -7,7 +9,7 @@ interface Props {
   className?: string;
 }
 
-const Reveal = ({ children, width = "100%", className }: Props) => {
+const Reveal = ({ children, className }: Props) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.2, once: true });
   const mainControls = useAnimation();
