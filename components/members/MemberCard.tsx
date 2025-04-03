@@ -23,7 +23,7 @@ const MemberCard: React.FC<MemberCardProps> = ({ uni_id, color, image, full_name
     <Link href={`/members/${uni_id}?color=${color}`} passHref className="block">
       <Card className={cn(
         'w-full min-w-[300px]', // Sets a consistent max width
-        'h-full flex flex-col items-center', // Ensures uniform height
+        'h-full min-h-[300px] flex flex-col items-center', // Ensures uniform height
         'rounded-none border-none', 
         color === 'orange' ? 'bg-black' : 'bg-black'
       )}>
