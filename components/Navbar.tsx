@@ -20,7 +20,7 @@ const Navbar = () => {
           </Link>
         </div>
       </div>
-      <div className='flex sticky justify-between border-t-gray-50 bg-black w-full h-10 items-center p-10 rounded-b-none'>
+      <div className='flex top-0 sticky justify-between border-t-gray-50 bg-black h-10 items-center p-10 rounded-b-none'>
         <div>
         </div>
         <div>
