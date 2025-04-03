@@ -21,17 +21,28 @@ interface MemberCardProps extends React.HTMLAttributes<HTMLDivElement> {
 const MemberCard: React.FC<MemberCardProps> = ({ uni_id, color, image, full_name, program }) => {
   return (
     <Link href={`/members/${uni_id}?color=${color}`} passHref className="block">
-    <div className='flex justify-center'>
-      <Image className='rounded-none  object-cover' src={image} alt='Rafi' width={200} height={200} />
-      <Card className={cn('w-full', 'rounded-none', 'border-none', color === 'orange' ? 'bg-black' : 'bg-black')}>
-        <CardContent>
-          <CardTitle className='text-3xl font-bold text-white pt-6'>{full_name}</CardTitle>
+      <Card className={cn(
+        'w-full min-w-[300px]', // Sets a consistent max width
+        'h-full flex flex-col items-center', // Ensures uniform height
+        'rounded-none border-none', 
+        color === 'orange' ? 'bg-black' : 'bg-black'
+      )}>
+        <div className="w-full aspect-square relative">  
+          {/* Ensures square aspect ratio */}
+          <Image 
+            className="object-cover rounded-none" 
+            src={image} 
+            alt={full_name} 
+            layout="fill"
+          />
+        </div>
+        <CardContent className="flex flex-col items-center text-center">
+          <CardTitle className='text-3xl font-bold text-white pt-4'>{full_name}</CardTitle>
         </CardContent>
-        <CardFooter>
+        <CardFooter className="flex justify-center text-center">
           <CardDescription className='text-white'>{program}</CardDescription>
         </CardFooter>
       </Card>
-    </div>
     </Link>
   )
 }
