@@ -21,7 +21,7 @@ interface MemberCardProps extends React.HTMLAttributes<HTMLDivElement> {
 const MemberCard: React.FC<MemberCardProps> = ({ uni_id, color, image, full_name, program }) => {
   return (
     <Link href={`/members/${uni_id}?color=${color}`} passHref className="block">
-    <div className='flex'>
+    <div className='flex justify-center'>
       <Image className='rounded-none  object-cover' src={image} alt='Rafi' width={200} height={200} />
       <Card className={cn('w-full', 'rounded-none', 'border-none', color === 'orange' ? 'bg-black' : 'bg-black')}>
         <CardContent>
