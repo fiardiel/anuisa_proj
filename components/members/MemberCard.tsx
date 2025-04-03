@@ -36,11 +36,11 @@ const MemberCard: React.FC<MemberCardProps> = ({ uni_id, color, image, full_name
           />
         </div>
         
-        <div className="w-full aspect-video relative py-16">
-          <CardContent className="flex flex-col items-center text-center">
-            <CardTitle className='text-3xl font-bold text-white'>{full_name}</CardTitle>
+        <div className="w-full aspect-video relative justify-center items-center flex flex-col">
+          <CardContent className="text-center">
+            <CardTitle className='text-3xl font-bold text-white text-center'>{full_name}</CardTitle>
           </CardContent>
-          <CardFooter className="flex justify-center text-center">
+          <CardFooter className="text-center">
             <CardDescription className='text-white text-xl'>{program}</CardDescription>
           </CardFooter>
         </div>
