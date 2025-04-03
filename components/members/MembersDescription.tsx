@@ -1,9 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
-import { useSearchParams } from "next/navigation";
-
 export interface MembersDescriptionProps {
     nickname: string;
     uniId: string;

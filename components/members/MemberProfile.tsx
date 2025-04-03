@@ -1,8 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
-import { useSearchParams } from "next/navigation";
 import MembersImage from '@/components/members/MembersImage'
 import MembersDescription from '@/components/members/MembersDescription'
 
@@ -41,10 +39,6 @@ const MemberProfile: React.FC<MemberProfileProps> = ({
     research_projects,
     profilePictureUrl,
   }) => {
-    const searchParams = useSearchParams();
-    const color = searchParams.get("color") as "bg-black" | "bg-black" || "bg-black"; 
-
-    const bgColor = color === "bg-black" ? "bg-black" : "bg-black";
     return (
       <div className="w-full">
         <MembersImage 
