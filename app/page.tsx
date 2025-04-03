@@ -22,7 +22,7 @@ export default async function Home() {
           </button>
         </div>
         <div className='p-10 mt-10'>
-          <h1 className='text-5xl font-semibold'>Members</h1>
+          <h1 className='text-5xl font-semibold'>Talents</h1>
             <div>
               <MemberList members={members} />
             </div>

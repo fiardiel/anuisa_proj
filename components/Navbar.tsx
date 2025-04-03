@@ -31,13 +31,10 @@ const Navbar = () => {
               <div className="p-8 flex flex-col justify-between items-center">
                 <div className="max-w-md mx-auto ">
                   <Button asChild variant={'link'} className='text-lg font-medium'>
+                    <Link href={'/events'}>Highlights</Link>
+                  </Button>
+                  <Button asChild variant={'link'} className='text-lg font-medium'>
                     <Link href={'/aboutus'}>About Us</Link>
-                  </Button>
-                  <Button asChild variant={'link'} className='text-lg font-medium'>
-                    <Link href={'/events'}>Events</Link>
-                  </Button>
-                  <Button asChild variant={'link'} className='text-lg font-medium'>
-                    <Link href={'/members'}>Members</Link>
                   </Button>
                 </div>
               </div>
@@ -46,13 +43,10 @@ const Navbar = () => {
         </div>
         <div className='hidden sm:flex gap-3'>
           <Button asChild variant={'link'} className='text-lg font-medium'>
+            <Link href={'/events'}>Highlights</Link>
+          </Button>
+          <Button asChild variant={'link'} className='text-lg font-medium'>
             <Link href={'/aboutus'}>About Us</Link>
-          </Button>
-          <Button asChild variant={'link'} className='text-lg font-medium'>
-            <Link href={'/events'}>Events</Link>
-          </Button>
-          <Button asChild variant={'link'} className='text-lg font-medium'>
-            <Link href={'/members'}>Members</Link>
           </Button>
         </div>
       </div>
