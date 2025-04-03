@@ -7,15 +7,17 @@ export default async function Home() {
   return (
     <div className="p-10">
       <div className="mt-20">
-        <p className="text-5xl font-semibold">
-          Australian National University
-        </p>
-        <p className="text-5xl font-semibold">
-          Indonesian Students Association
-        </p>
-        <p className="mt-5 w-3/5 text-2xl">
-          Through this platform, ANUISA seeks to connect Indonesian talents within the ANU community to industry and beyond, while fostering employability and idea exchange.
-        </p>
+        <div className="ml-10">
+          <p className="text-5xl font-semibold">
+            Australian National University
+          </p>
+          <p className="text-5xl font-semibold">
+            Indonesian Students Association
+          </p>
+          <p className="mt-5 w-3/5 text-2xl">
+            Through this platform, ANUISA seeks to connect Indonesian talents within the ANU community to industry and beyond, while fostering employability and idea exchange.
+          </p>
+        </div>
         <div className="mt-20">
         </div>
         <div className='p-10 mt-10'>
