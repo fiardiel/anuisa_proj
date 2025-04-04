@@ -27,13 +27,13 @@ const MemberImage: React.FC<MemberImageProps> = ({
     return (
         <div className={`flex flex-col sm:flex-row ${bgColor} p-4 rounded-none text-white w-full items-center sm:items-start justify-center py-20 gap-6`}>
             {/* Image Section: Stays centered on small screens */}
-            <div className="w-3/5 sm:w-2/5 flex items-center justify-center ml-0 sm:ml-6">
+            <div className="w-3/5 sm:w-2/5 flex items-center justify-center ml-0 sm:ml-36">
                 {profilePictureUrl ? (
                     <Image
                         src={profilePictureUrl}
                         alt={name}
-                        width={250}
-                        height={250}
+                        width={300}
+                        height={300}
                         className="rounded-none"
                         unoptimized 
                     />
@@ -51,15 +51,15 @@ const MemberImage: React.FC<MemberImageProps> = ({
                 {/* Contact Links */}
                 <div className="mt-4">
                     <p className="mt-2 wrap">{email}</p>
-                    <div className="flex gap-4 mt-2 bg-white rounded-lg justify-center sm:justify-start">
+                    <div className="flex gap-4 mt-2 rounded-lg justify-center sm:justify-start">
                         {instagram && (
                             <a href={instagram} target="_blank" rel="noopener noreferrer">
-                                <Image src="/icons8-instagram-50.png" alt="Instagram" width={24} height={24} />
+                                <Image src="/icons8-instagram.svg" alt="Instagram" width={24} height={24} />
                             </a>
                         )}
                         {linkedin && (
                             <a href={linkedin} target="_blank" rel="noopener noreferrer">
-                                <Image src="/icons8-linkedin-50.png" alt="LinkedIn" width={24} height={24} />
+                                <Image src="/icons8-linkedin.svg" alt="LinkedIn" width={24} height={24} />
                             </a>
                         )}
                     </div>
