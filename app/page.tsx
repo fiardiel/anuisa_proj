@@ -5,8 +5,8 @@ import fetchMembers from "@/lib/members/fetchMembers";
 export default async function Home() {
   const members = await fetchMembers()
   return (
-    <div className="p-10">
-      <div className="mt-20">
+    <div>
+      <div className="mt-20 px-10 py-5">
         <div className="ml-10">
           <p className="text-5xl font-semibold">
             Australian National University
@@ -31,7 +31,7 @@ export default async function Home() {
             <MemberList members={members} />
           </div>
           </div>
-        </div>
       </div>
+    </div>
   );
 }
