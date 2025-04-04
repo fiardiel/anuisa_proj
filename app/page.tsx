@@ -29,7 +29,7 @@ export default async function Home() {
             </h1>
           </div>
         </div>
-            <div className="relative flex justify-center itemns-center">
+            <div className="relative flex justify-center items-center">
               <MemberList members={members} />
             </div>
           </div>
