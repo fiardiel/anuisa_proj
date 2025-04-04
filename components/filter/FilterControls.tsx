@@ -21,8 +21,8 @@ const FilterControls: React.FC<FilterControlsProps> = ({
   <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6">
     <select value={degree} onChange={e => setDegree(e.target.value)} className="border p-2 rounded">
       <option value="">All Degrees</option>
-      <option value="Bachelor's">Bachelor's</option>
-      <option value="Master's">Master's</option>
+      <option value="Bachelor's">Bachelor&apos;s</option>
+      <option value="Master's">Master&apos;s</option>
       <option value="PhD">PhD</option>
     </select>
 
