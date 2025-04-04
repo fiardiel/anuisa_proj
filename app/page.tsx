@@ -1,6 +1,5 @@
 import MemberList from "@/components/members/MemberList";
 import fetchMembers from "@/lib/members/fetchMembers";
-import Footer from "@/components/Footer";
 
 
 export default async function Home() {
