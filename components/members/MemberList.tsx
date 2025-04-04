@@ -30,7 +30,7 @@ const MemberList: React.FC<MemberListProps> = ({ members }) => {
   return (
     <div className="px-4">
       {/* Mobile Filter Button + Drawer */}
-      <div className="sm:hidden flex justify-center mb-6 mt-2">
+      <div className="sm:hidden flex justify-center mb-8 mt-4">
         <Drawer direction="top">
           <DrawerTrigger asChild>
             <Button className="flex items-center gap-2">
@@ -70,7 +70,7 @@ const MemberList: React.FC<MemberListProps> = ({ members }) => {
       )}
 
       {/* Filtered Members */}
-      <div className="grid lg:grid-cols-2 2xl:grid-cols-3 gap-x-16 gap-y-14">
+      <div className="grid lg:grid-cols-2 2xl:grid-cols-3 gap-x-16 gap-y-6 md:gap-y-14">
         {filteredMembers.map((member, index) => (
           <div key={member.uni_id}>
             <Reveal className='h-full'>
