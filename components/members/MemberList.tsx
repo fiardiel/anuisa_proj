@@ -4,66 +4,73 @@ import React, { useState } from 'react'
 import MemberCard from './MemberCard'
 import Reveal from '../utils/Reveal'
 import { Member } from '@/types/Member'
+import FilterControls from '../filter/FilterControls'
+import { Drawer, DrawerContent, DrawerOverlay, DrawerTrigger } from '@/components/ui/drawer'
+import { Menu } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 
 interface MemberListProps {
   members: Member[]
 }
 
 const MemberList: React.FC<MemberListProps> = ({ members }) => {
-  // State for filters
   const [degree, setDegree] = useState<string>('')
   const [college, setCollege] = useState<string>('')
-  const [isSTEM, setIsStem] = useState<string>("");
+  const [isSTEM, setIsStem] = useState<string>("")
 
-  const isSTEMBoolean = isSTEM === "" ? null : isSTEM === "true";
+  const isSTEMBoolean = isSTEM === "" ? null : isSTEM === "true"
 
-  // Convert `isSTEM` value to boolean or keep it null if not selected
-
-  // Apply filtering logic
   const filteredMembers = members.filter(member => {
     const matchesDegree = degree ? member.degree === degree : true
     const matchesCollege = college ? member.college === college : true
     const matchesIsSTEM = isSTEMBoolean !== null ? member.is_stem === isSTEMBoolean : true
-
     return matchesDegree && matchesCollege && matchesIsSTEM
   })
 
-
   return (
-    <div>
-      {/* Filters */}
-      <div className="flex justify-center gap-4 mb-6 ">
-        <select value={degree} onChange={e => setDegree(e.target.value)} className="border p-2 rounded">
-          <option value="">All Degrees</option>
-          <option value="Bachelor's">Bachelor's</option>
-          <option value="Master's">Master's</option>
-          <option value="PhD">PhD</option>
-        </select>
-
-        <select value={college} onChange={e => setCollege(e.target.value)} className="border p-2 rounded">
-          <option value="">All Colleges</option>
-          <option value="College of Systems & Society">College of Systems & Society</option>
-          <option value="College of Law, Governance & Policy">College of Law, Governance & Policy</option>
-          <option value="College of Science & Medicine">College of Science & Medicine</option>
-          <option value="College of Asia & the Pacific">College of Asia & the Pacific</option>
-          <option value="College of Arts & Social Sciences">College of Arts & Social Sciences</option>
-          <option value="College of Business & Economics">College of Business & Economics</option>     
-        </select>
-
-        <select value={isSTEM} onChange={e => setIsStem(e.target.value)} className="border p-2 rounded">
-          <option value="">All Fields</option>
-          <option value="true">STEM</option>
-          <option value="false">Non-STEM</option>
-        </select>
+    <div className="px-4">
+      {/* Mobile Filter Button + Drawer */}
+      <div className="sm:hidden flex justify-center mb-4 mt-4">
+        <Drawer direction="top">
+          <DrawerTrigger asChild>
+            <Button className="flex items-center gap-2">
+              <Menu />
+              Filters
+            </Button>
+          </DrawerTrigger>
+          <DrawerOverlay className="fixed inset-0 bg-black/40" />
+          <DrawerContent className="bg-white rounded-none p-6 m-0 bottom-100 shadow-xl w-full max-w-full top-0 overflow-hidden">
+            <FilterControls
+              degree={degree}
+              setDegree={setDegree}
+              college={college}
+              setCollege={setCollege}
+              isSTEM={isSTEM}
+              setIsStem={setIsStem}
+            />
+          </DrawerContent>
+        </Drawer>
       </div>
 
-      {/* Display a message if no members match the filters */}
+      {/* Filters Inline for Tablet and Up */}
+      <div className="hidden sm:flex justify-center mb-6">
+        <FilterControls
+          degree={degree}
+          setDegree={setDegree}
+          college={college}
+          setCollege={setCollege}
+          isSTEM={isSTEM}
+          setIsStem={setIsStem}
+        />
+      </div>
+
+      {/* Empty State */}
       {filteredMembers.length === 0 && (
         <p className="text-gray-500 text-center">No members match the selected filters.</p>
       )}
 
-      {/* Filtered Members List */}
-      <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-10 mt-10">
+      {/* Filtered Members */}
+      <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-x-16 gap-y-14">
         {filteredMembers.map((member, index) => (
           <div key={member.uni_id}>
             <Reveal>
