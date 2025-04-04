@@ -20,7 +20,7 @@ const Navbar = () => {
           </Link>
         </div>
       </div>
-      <div className='flex top-0 sticky justify-between border-t-gray-50 bg-black h-10 items-center p-10 rounded-b-none'>
+      <div className='w-full flex top-0 sticky justify-between border-t-gray-50 bg-black h-10 items-center p-10 rounded-b-none'>
         <div>
         </div>
         <div>
@@ -47,12 +47,12 @@ const Navbar = () => {
             </Drawer>
           </div>
             <div className='hidden sm:flex'>
-            <Button asChild variant={'link'} className='text-lg font-sm text-white'>
-              <Link href={'/events'}>Highlights</Link>
-            </Button>
-            <Button asChild variant={'link'} className='text-lg font-sm text-white'>
-              <Link href={'/aboutus'}>About Us</Link>
-            </Button>
+              <Button asChild variant={'link'} className='text-lg font-sm text-white'>
+                <Link href={'/events'}>Highlights</Link>
+              </Button>
+              <Button asChild variant={'link'} className='text-lg font-sm text-white'>
+                <Link href={'/aboutus'}>About Us</Link>
+              </Button>
             </div>
         </div>
       </div>

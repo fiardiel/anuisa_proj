@@ -25,9 +25,9 @@ const MemberImage: React.FC<MemberImageProps> = ({
 
     const bgColor = color === "bg-black" ? "bg-black" : "bg-black";
     return (
-        <div className={`flex ${bgColor} p-8 rounded-none text-white w-full items-start justify-center py-20`}>
+        <div className={`flex ${bgColor} p-5 rounded-none text-white w-full items-start justify-center py-20`}>
             {/* Image Section: Allow it to be tall but maintain aspect ratio */}
-            <div className="w-2/5 flex items-center justify-center ">
+            <div className="w-2/5 flex items-center justify-center">
                 {profilePictureUrl ? (
                 <Image
                     src={profilePictureUrl}
@@ -45,13 +45,13 @@ const MemberImage: React.FC<MemberImageProps> = ({
             </div>
     
             {/* Info Section */}
-            <div className="w-2/5 flex flex-col items-start justify-start h-full pt-4">
+            <div className="w-2/5 flex flex-col items-start justify-start h-full pt-4 mx-8">
                 <h2 className="text-4xl font-bold">{name}</h2>                
 
                 {/* Contact Links */}
                 <div className="mt-4">
                     <p className="mt-2">{email}</p>
-                    <div className="flex gap-3 mt-2">
+                    <div className="flex gap-4 mt-2 bg-white rounded-lg justify-center">
                         {instagram && (
                             <a href={instagram} target="_blank" rel="noopener noreferrer">
                                 <Image src="/icons8-instagram-50.png" alt="Instagram" width={24} height={24} />
