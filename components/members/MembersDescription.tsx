@@ -56,7 +56,7 @@ const MembersDescription: React.FC<MembersDescriptionProps> = ({
           </div>
         </div>
 
-        <div className={`p-8 bg-white text-black rounded-b-lg shadow-md`}>
+        <div className={`p-8 bg-white text-black rounded-b-lg`}>
             <h3 className="text-2xl font-bold mb-4">Research Projects</h3>
             {research_projects.length > 0 ? (
                 <ol className="mt-2 space-y-3 list-decimal list-inside">
