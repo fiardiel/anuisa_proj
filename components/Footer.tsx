@@ -8,12 +8,10 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-black text-white py-12 w-full px-16 mt-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div className='bg-black flex items-center justify-start'>
-            <div className='bg-white flex items-center justify-center p-8'>
-                <Link href={'/'}>
-                    <Image src="/logo.png" alt="logo" width={125} height={125} />
-                </Link>
-            </div>                
+        <div className='bg-black flex items-center justify-start h-full'>
+            <Link href={'/'}>
+                <Image src="/logo-bw.png" alt="logo" width={250} height={250} />
+            </Link>                         
         </div>
 
 
