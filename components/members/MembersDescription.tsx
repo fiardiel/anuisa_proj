@@ -39,14 +39,13 @@ const MembersDescription: React.FC<MembersDescriptionProps> = ({
         <div className="flex flex-col justify-between p-8 bg-white text-black">
         <h3 className="text-2xl font-bold mb-4">Profile</h3>
           <div>
-            <p className="text-xl ">{`(${nickname}) - ${uniId}`}</p>
+            <p className="text-xl ">{`${nickname} - ${uniId}`}</p>
             <p className="text-xl ">{college}</p>
-            <div className="flex gap-2 mt-2">
-            <p className="text-xl ">{degree}</p>
-            <span></span> {/* Divider */}
-            <p className="text-xl ">{school}</p>
-          </div>
-            <p className="text-xl">{other_programs}</p>
+            <div className="flex flex-col gap-2 mt-3">
+              <p className="text-xl ">{degree}</p>
+              <p className="text-xl ">{school}</p>
+            </div>
+            <p className="text-xl mt-3">{other_programs}</p>
             <p className="text-xl  mt-2">
               <strong>Career Interests:</strong> {interests}
             </p>

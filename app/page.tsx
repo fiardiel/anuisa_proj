@@ -27,7 +27,7 @@ export default async function Home() {
               </h1>
             </div>
           </div>
-          <div className="relative flex items-center justify-center">
+          <div className="relative flex items-center justify-center overflow-hidden">
             <MemberList members={members} />
           </div>
           </div>

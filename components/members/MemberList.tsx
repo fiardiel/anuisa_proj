@@ -39,7 +39,7 @@ const MemberList: React.FC<MemberListProps> = ({ members }) => {
             </Button>
           </DrawerTrigger>
           <DrawerOverlay className="fixed inset-0 bg-black/40" />
-          <DrawerContent className="bg-white rounded-none border-spacing-4 p-6 m-0 bottom-100 shadow-xl w-full max-w-full top-0">
+          <DrawerContent className="bg-white rounded-none p-6 m-0 bottom-100 shadow-xl w-full max-w-full top-0 overflow-hidden">
             <FilterControls
               degree={degree}
               setDegree={setDegree}
