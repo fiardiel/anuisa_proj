@@ -70,7 +70,7 @@ const MemberList: React.FC<MemberListProps> = ({ members }) => {
       )}
 
       {/* Filtered Members */}
-      <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-10 mt-10">
+      <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-x-16 gap-y-14">
         {filteredMembers.map((member, index) => (
           <div key={member.uni_id}>
             <Reveal>
