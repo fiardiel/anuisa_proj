@@ -28,7 +28,6 @@ const MemberList: React.FC<MemberListProps> = ({ members }) => {
     return matchesDegree && matchesCollege && matchesIsSTEM
   })
 
-  console.log(filteredMembers)
 
   return (
     <div>
