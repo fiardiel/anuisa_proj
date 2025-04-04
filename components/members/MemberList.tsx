@@ -13,19 +13,22 @@ const MemberList: React.FC<MemberListProps> = ({ members }) => {
   // State for filters
   const [degree, setDegree] = useState<string>('')
   const [college, setCollege] = useState<string>('')
-  const [isSTEM, setIsStem] = useState<string>('') // 'true', 'false', or ''
+  const [isSTEM, setIsStem] = useState<string>("");
+
+  const isSTEMBoolean = isSTEM === "" ? null : isSTEM === "true";
 
   // Convert `isSTEM` value to boolean or keep it null if not selected
-  const isSTEMFilter = isSTEM === 't' ? true : isSTEM === 'f' ? false : null
 
   // Apply filtering logic
   const filteredMembers = members.filter(member => {
     const matchesDegree = degree ? member.degree === degree : true
     const matchesCollege = college ? member.college === college : true
-    const matchesIsSTEM = isSTEMFilter !== null ? member.is_stem === isSTEMFilter : true
+    const matchesIsSTEM = isSTEMBoolean !== null ? member.is_stem === isSTEMBoolean : true
 
     return matchesDegree && matchesCollege && matchesIsSTEM
   })
+
+  console.log(filteredMembers)
 
   return (
     <div>
@@ -50,8 +53,8 @@ const MemberList: React.FC<MemberListProps> = ({ members }) => {
 
         <select value={isSTEM} onChange={e => setIsStem(e.target.value)} className="border p-2 rounded">
           <option value="">All Fields</option>
-          <option value="t">STEM</option>
-          <option value="f">Non-STEM</option>
+          <option value="true">STEM</option>
+          <option value="false">Non-STEM</option>
         </select>
       </div>
 
