@@ -39,7 +39,7 @@ const MembersDescription: React.FC<MembersDescriptionProps> = ({
         <div>
           <p className="text-xl ">{`${nickname} - ${uniId}`}</p>
           <p className="text-2xl font-semibold mt-3"> Education </p>
-          <p className="text-xl mt-1">1. {degree}, ANU {school}</p>
+          <p className="text-xl mt-1">1. {degree}, {school}</p>
           {other_programs ?
             <p className="text-xl mt-1">2. {other_programs}</p> : null
           }
