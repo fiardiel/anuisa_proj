@@ -6,7 +6,6 @@ export interface MembersDescriptionProps {
   uniId: string;
   degree: string;
   school: string;
-  college: string;
   other_programs: string;
   interests: string;
   expertise: string;
@@ -19,7 +18,6 @@ const MembersDescription: React.FC<MembersDescriptionProps> = ({
   uniId,
   degree,
   school,
-  college,
   other_programs,
   interests,
   expertise,
