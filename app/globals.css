@@ -8,7 +8,17 @@
   }
 }
 
+@font-face {
+  font-family: 'Public Sans';
+  src: url('/fonts/public-sans-italic.ttf') format('ttf'),
+       url('/fonts/public-sans.ttf') format('ttf');
+  font-weight: 300 600;
+  font-style: normal;
+}
 
+body {
+  font-family: 'Public Sans', sans-serif;
+}
 
 @layer base {
   :root {

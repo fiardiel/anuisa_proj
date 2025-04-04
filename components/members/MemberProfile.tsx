@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
-import { useSearchParams } from "next/navigation";
+import MembersImage from '@/components/members/MembersImage'
+import MembersDescription from '@/components/members/MembersDescription'
 
 export interface MemberProfileProps {
     name: string;
@@ -39,91 +39,29 @@ const MemberProfile: React.FC<MemberProfileProps> = ({
     research_projects,
     profilePictureUrl,
   }) => {
-    const searchParams = useSearchParams();
-    const color = searchParams.get("color") as "bg-black" | "bg-black" || "bg-black"; 
-
-    const bgColor = color === "bg-black" ? "bg-black" : "bg-black";
     return (
-      <div className="max-w-4xl mx-auto p-6 ">
-        {/* Flex Container for Image + Info */}
-        <div className={`flex ${bgColor} p-8 rounded-t-lg text-white`}>
-          {/* Image Section: Allow it to be tall but maintain aspect ratio */}
-          <div className="w-1/3 flex items-start">
-          {profilePictureUrl ? (
-            <Image
-              src={profilePictureUrl}
-              alt={name}
-              width={250}
-              height={250}
-              className="rounded-lg"
-              unoptimized 
-            />
-          ) : (
-            <div className="w-[150px] h-[150px] bg-gray-300 rounded-lg flex items-center justify-center">
-              No Image
-            </div>
-          )}
-          </div>
-  
-          {/* Info Section */}
-          <div className="w-2/3 flex flex-col justify-between">
-            <div>
-              <h2 className="text-3xl font-bold">{name}</h2>
-              <p className="text-lg font-semibold">{`(${nickname}) - ${uniId}`}</p>
-              <p className="text-md font-semibold">{college}</p>
-              <div className="flex gap-2 mt-2">
-              <p className="text-md font-semibold">{degree}</p>
-              <span></span> {/* Divider */}
-              <p className="text-md font-semibold">{school}</p>
-            </div>
-              <p className="text-md">{other_programs}</p>
-              <p className="text-md font-semibold mt-2">
-                <strong>Career Interests:</strong> {interests}
-              </p>
-              <p className="text-md font-semibold">
-                <strong>Area of Expertise:</strong> {expertise}
-              </p>
-            </div>
-  
-            {/* Contact Links */}
-            <div className="mt-4">
-              <p className="mt-2">{email}</p>
-              <div className="flex gap-3 mt-2">
-                {instagram && (
-                  <a href={instagram} target="_blank" rel="noopener noreferrer">
-                    <Image src="/icons8-instagram-50.png" alt="Instagram" width={24} height={24} />
-                  </a>
-                )}
-                {linkedin && (
-                  <a href={linkedin} target="_blank" rel="noopener noreferrer">
-                    <Image src="/icons8-linkedin-50.png" alt="LinkedIn" width={24} height={24} />
-                  </a>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-  
-        {/* Biography Directly Below (Fixes White Space Issue) */}
-        <div className={`p-8 ${bgColor} text-white -mt-2`}>
-          <h3 className="text-xl font-bold">Biography</h3>
-          <p className="text-md mt-2">
-            {bio}
-          </p>
-        </div>
-
-        <div className={`p-8 ${bgColor} text-white rounded-b-lg shadow-md`}>
-            <h3 className="text-xl font-bold">Research Projects</h3>
-            {research_projects.length > 0 ? (
-                <ol className="mt-2 space-y-3 list-decimal list-inside">
-                {research_projects.map((research, index) => (
-                    <li key={index} className="text-md">{research}</li>
-                ))}
-                </ol>
-            ) : (
-                <p className="italic text-gray-300">No research projects listed.</p>
-            )}
-        </div>
+      <div className="w-full">
+        <MembersImage 
+            name={name}
+            email={email}
+            instagram={instagram}
+            linkedin={linkedin}
+            profilePictureUrl={profilePictureUrl}
+          />
+        
+        <MembersDescription
+            nickname={nickname}
+            uniId={uniId}
+            degree={degree}
+            school={school}
+            college={college}
+            other_programs={other_programs}
+            interests={interests}
+            expertise={expertise}
+            bio={bio}
+            research_projects={research_projects}
+          />
+        
       </div>
     );
   };
