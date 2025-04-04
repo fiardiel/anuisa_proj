@@ -21,32 +21,17 @@ interface MemberCardProps extends React.HTMLAttributes<HTMLDivElement> {
 const MemberCard: React.FC<MemberCardProps> = ({ uni_id, color, image, full_name, program }) => {
   return (
     <Link href={`/members/${uni_id}?color=${color}`} passHref className="block">
-      <Card className={cn(
-        'w-full max-w-[500px]', // Sets a consistent max width
-        'h-full flex flex-col items-center', // Ensures uniform height
-        'rounded-none border-none', 
-        color === 'orange' ? 'bg-black' : 'bg-black'
-      )}>
-        <div className="w-full aspect-square relative">  
-          <Image 
-            className="object-cover rounded-none" 
-            src={image} 
-            alt={full_name} 
-            layout="fill"
-          />
-        </div>
-        
-        <div className="w-full aspect-video relative justify-center items-center flex flex-col">
-          <CardContent className="text-center">
-            <CardTitle className='text-3xl font-bold text-white text-center'>{full_name}</CardTitle>
+      <div className='flex flex-row justify-center text-center w-full min-w-[500px]'>
+        <Image className='rounded-none  object-cover' src={image} alt='Rafi' width={200} height={200} />
+        <Card className={cn('pt-10', 'w-full', 'rounded-none', 'border-none', color === 'orange' ? 'bg-black' : 'bg-black')}>
+          <CardContent>
+            <CardTitle className='text-3xl font-bold text-white'>{full_name}</CardTitle>
           </CardContent>
-          <CardFooter className="text-center">
-            <CardDescription className='text-white text-xl'>{program}</CardDescription>
+          <CardFooter className='justify-center'>
+            <CardDescription className='text-white text-lg'>{program}</CardDescription>
           </CardFooter>
-        </div>
-        
-        
-      </Card>
+        </Card>
+      </div>
     </Link>
   )
 }
