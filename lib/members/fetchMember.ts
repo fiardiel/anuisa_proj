@@ -3,13 +3,13 @@
 import { supabase } from '@/lib/supabaseClient'
 import type { MemberProfileProps } from '@/components/members/MemberProfile'
 
-const fetchMember = async (uniId: string): Promise<MemberProfileProps | null> => {
+const fetchMember = async (identifier: string): Promise<MemberProfileProps | null> => {
   try {
     // Fetch the member profile
     const { data: profileData, error: profileError } = await supabase
       .from('profile')
-      .select('full_name, nickname, uni_id, program, school, college, other_degrees, career_interests, expertise, email, instagram, linkedin, bio')
-      .eq('uni_id', uniId)
+      .select('full_name, nickname, identifier, program, school, college, other_degrees, career_interests, expertise, email, instagram, linkedin, bio, invalid_photo')
+      .eq('identifier', identifier)
       .single()
 
     if (profileError) throw profileError
@@ -19,14 +19,13 @@ const fetchMember = async (uniId: string): Promise<MemberProfileProps | null> =>
     const { data: researchData, error: researchError } = await supabase
       .from('research_project')
       .select('research')
-      .eq('researcher', uniId)
+      .eq('researcher', identifier)
 
     if (researchError) throw researchError
 
     return {
       name: profileData.full_name,
       nickname: profileData.nickname,
-      uniId: profileData.uni_id,
       degree: profileData.program,
       school: profileData.school,
       college: profileData.college,
@@ -38,7 +37,9 @@ const fetchMember = async (uniId: string): Promise<MemberProfileProps | null> =>
       linkedin: profileData.linkedin || '',
       bio: profileData.bio,
       research_projects: researchData.map((r) => r.research), 
-      profilePictureUrl: `https://qcjsnfklkapuequkkdvh.supabase.co/storage/v1/object/public/anuisa-profile-pictures/${profileData.uni_id}.png`,
+      profilePictureUrl: profileData.invalid_photo
+      ? '/0Z.png' 
+      : `https://qcjsnfklkapuequkkdvh.supabase.co/storage/v1/object/public/anuisa-profile-pictures/photos/${profileData.identifier}.png`,
     }
   } catch (err) {
     console.error('Error fetching member:', err)

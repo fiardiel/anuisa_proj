@@ -7,26 +7,26 @@ import {
   CardFooter,
   CardTitle,
 } from "@/components/ui/card"
+import ProfileImage from '../ui/ProfileImage';
 import Image from 'next/image'
 import { Button } from '../ui/button';
 import { Eye } from 'lucide-react';
 
 interface MemberCardProps extends React.HTMLAttributes<HTMLDivElement> {
-  uni_id: string
-  color: "orange" | "blue"
+  identifier: string
   image: string
   full_name: string
   program: string
 }
 
-const MemberCard: React.FC<MemberCardProps> = ({ uni_id, color, image, full_name, program }) => {
+const MemberCard: React.FC<MemberCardProps> = ({ identifier, image, full_name, program }) => {
   return (
-    <Link href={`/members/${uni_id}?color=${color}`} passHref className="h-auto">
+    <Link href={`/members/${identifier}`} passHref className="h-auto">
       <div className='grid grid-cols-5 sm:flex justify-center text-center w-full min-w-[20rem] max-w-[600px] transition-transform duration-300 ease-in-out hover:scale-105 rounded-xl h-full shadow-lg'>
-        <Image
+        <ProfileImage
           className='border-2 border-r-0 border-gray-300 rounded-r-none rounded-l-xl object-cover sm:h-auto h-full col-span-2'
-          src={image}
-          alt={image}
+          profilePictureUrl={image}
+          name={full_name}
           width={200}
           height={200} />
         <Card className="flex flex-col justify-between border-2 border-l-0 border-gray-300 pt-6 sm:w-full rounded-l-none rounded-r-xl h-auto bg-black col-span-3">

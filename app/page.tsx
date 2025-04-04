@@ -1,7 +1,7 @@
 import MemberList from "@/components/members/MemberList";
 import fetchMembers from "@/lib/members/fetchMembers";
 import Image from "next/image";
-
+export const revalidate = 0;
 
 export default async function Home() {
   const members = await fetchMembers()

@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { useSearchParams } from "next/navigation";
+import ProfileImage from "../ui/ProfileImage";
 
 
 export interface MemberImageProps {
@@ -20,22 +20,17 @@ const MemberImage: React.FC<MemberImageProps> = ({
     linkedin,
     profilePictureUrl,
   }) => {
-    const searchParams = useSearchParams();
-    const color = searchParams.get("color") as "bg-black" | "bg-black" || "bg-black"; 
-
-    const bgColor = color === "bg-black" ? "bg-black" : "bg-black";
     return (
-        <div className={`flex flex-col sm:flex-row ${bgColor} p-4 rounded-none text-white w-full items-center sm:items-start justify-center py-20 gap-6`}>
+        <div className={`flex flex-col sm:flex-row bg-black p-4 rounded-none text-white w-full items-center sm:items-start justify-center py-20 gap-6`}>
             {/* Image Section: Stays centered on small screens */}
             <div className="w-3/5 sm:w-2/5 flex items-center justify-center ml-0 sm:ml-36">
                 {profilePictureUrl ? (
-                    <Image
-                        src={profilePictureUrl}
-                        alt={name}
+                    <ProfileImage
+                        profilePictureUrl={profilePictureUrl}
+                        name={name}
                         width={300}
                         height={300}
-                        className="rounded-none"
-                        unoptimized 
+                        className="rounded-none" 
                     />
                 ) : (
                     <div className="w-[150px] h-[150px] bg-gray-300 rounded-lg flex items-center justify-center">
@@ -46,20 +41,20 @@ const MemberImage: React.FC<MemberImageProps> = ({
 
             {/* Info Section: Adjusts width and text alignment */}
             <div className="w-4/5 sm:w-3/5 lg:w-2/5 flex flex-col items-center sm:items-start justify-start h-full pt-0 mx-6 sm:mr-20 overflow-visible text-center sm:text-left">
-                <h2 className="text-3xl sm:text-4xl font-bold">{name}</h2>
+                <h2 className="text-4xl sm:text-6xl font-bold">{name}</h2>
 
                 {/* Contact Links */}
                 <div className="mt-4">
-                    <p className="mt-2 wrap">{email}</p>
+                    <p className="mt-2 text-xl sm:text-2xl wrap">{email}</p>
                     <div className="flex gap-4 mt-2 rounded-lg justify-center sm:justify-start">
                         {instagram && (
                             <a href={instagram} target="_blank" rel="noopener noreferrer">
-                                <Image src="/icons8-instagram.svg" alt="Instagram" width={24} height={24} />
+                                <Image src="/Instagram-Icon.png" alt="Instagram" width={50} height={50} />
                             </a>
                         )}
                         {linkedin && (
                             <a href={linkedin} target="_blank" rel="noopener noreferrer">
-                                <Image src="/icons8-linkedin.svg" alt="LinkedIn" width={24} height={24} />
+                                <Image src="/LinkedIn-Icon.png" alt="LinkedIn" width={50} height={50} />
                             </a>
                         )}
                     </div>

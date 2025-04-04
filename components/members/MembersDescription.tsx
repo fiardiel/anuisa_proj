@@ -3,7 +3,7 @@
 import React from "react";
 export interface MembersDescriptionProps {
   nickname: string;
-  uniId: string;
+  name: string;
   degree: string;
   school: string;
   other_programs: string;
@@ -15,7 +15,7 @@ export interface MembersDescriptionProps {
 
 const MembersDescription: React.FC<MembersDescriptionProps> = ({
   nickname,
-  uniId,
+  name,
   degree,
   school,
   other_programs,
@@ -37,7 +37,7 @@ const MembersDescription: React.FC<MembersDescriptionProps> = ({
       <div className="flex flex-col justify-between p-8 bg-white text-black">
         <h3 className="text-4xl font-bold mb-4">Profile</h3>
         <div>
-          <p className="text-xl ">{`${nickname} - ${uniId}`}</p>
+        <p className="text-2xl ">{name} <strong> ({nickname})</strong></p>
           <p className="text-2xl font-semibold mt-3"> Education </p>
           <p className="text-xl mt-1">1. {degree}, {school}</p>
           {other_programs ?
