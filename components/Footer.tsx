@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
           
           
             <div>
-                <h3 className="text-2xl text-[#BE830E] font-semibold mb-4">Socials</h3>
+                <h3 className="text-2xl text-[#BE830E] font-semibold mb-4">Connect</h3>
                 <ul className="space-y-2 text-xl">
                     <li><Link href="https://www.facebook.com/ppiaanu/" className="hover:text-gray-300 transition">Facebook</Link></li>
                     <li><Link href="https://www.instagram.com/ppiaanu/" className="hover:text-gray-300 transition">Instagram</Link></li>
