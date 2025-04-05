@@ -27,8 +27,8 @@ const Footer: React.FC = () => {
           
           
             <div>
-                <h3 className="text-2xl text-[#BE830E] font-semibold mb-4">Socials</h3>
-                <ul className="flex space-x-4 text-xl">
+                <h3 className="text-2xl text-[#BE830E] font-semibold mb-4">Connect</h3>
+                <ul className="flex space-x-6 text-xl">
                   <li>
                     <Link href="https://www.facebook.com/ppiaanu/" className="hover:text-gray-300 transition">
                       <Image src="/icons8-facebook-240.svg" alt="Facebook logo" width={50} height={50} />
@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
                       <Image src="/icons8-linkedin.svg" alt="LinkedIn logo" width={45} height={45} />
                     </Link>
                   </li>
-                  <li className="flex justify-center items-center ml-4">
+                  <li className="flex justify-center items-center pl-2">
                     <a
                       href="mailto:anu@ppi-australia.org"
                       className="flex items-center justify-center hover:text-gray-300 transition"
