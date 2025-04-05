@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
             <div>
                 <h3 className="text-2xl text-[#BE830E] font-semibold mb-4">ANUISA</h3>
                 <ul className="space-y-2 text-xl">
-                <li><Link href="/" className="hover:text-gray-300 transition">Home</Link></li>
+                <li><Link href="/" className="hover:text-gray-300 transition">Talents</Link></li>
                 <li><Link href="/aboutus" className="hover:text-gray-300 transition">About Us</Link></li>
                 <li><Link href="/events" className="hover:text-gray-300 transition">Highlights</Link></li>
                 </ul>
@@ -28,13 +28,24 @@ const Footer: React.FC = () => {
           
             <div>
                 <h3 className="text-2xl text-[#BE830E] font-semibold mb-4">Socials</h3>
-                <ul className="space-y-2 text-xl">
-                    <li><Link href="https://www.facebook.com/ppiaanu/" className="hover:text-gray-300 transition">Facebook</Link></li>
-                    <li><Link href="https://www.instagram.com/ppiaanu/" className="hover:text-gray-300 transition">Instagram</Link></li>
-                    <li><Link href="https://www.linkedin.com/company/ppia-anu-anuisa/" className="hover:text-gray-300 transition">LinkedIn</Link></li>              
+                <ul className="flex space-x-4 text-xl">
+                  <li>
+                    <Link href="https://www.facebook.com/ppiaanu/" className="hover:text-gray-300 transition">
+                      <Image src="/icons8-facebook-240.svg" alt="Facebook logo" width={50} height={50} />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="https://www.instagram.com/ppiaanu/" className="hover:text-gray-300 transition">
+                      <Image src="/icons8-instagram.svg" alt="Instagram logo" width={50} height={50} />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="https://www.linkedin.com/company/ppia-anu-anuisa/" className="hover:text-gray-300 transition">
+                      <Image src="/icons8-linkedin.svg" alt="LinkedIn logo" width={50} height={50} />
+                    </Link>
+                  </li>
                 </ul>
             </div>
-          
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col justify-between items-start">
