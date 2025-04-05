@@ -47,7 +47,6 @@ const MemberProfile: React.FC<MemberProfileProps> = ({
                 linkedin={linkedin}
                 profilePictureUrl={profilePictureUrl}
             />
-
             <MembersDescription
                 nickname={nickname}
                 uniId={uniId}
