@@ -9,7 +9,7 @@ export default async function Home() {
     <div>
       <div className="relative">
         <Image
-          src="/background1JPG.JPG"
+          src="/anuisa_home.JPG"
           alt="background"
           height={1080}
           width={1920}
