@@ -30,45 +30,45 @@ const MembersDescription: React.FC<MembersDescriptionProps> = ({
     <div className="w-4/5 md:w-3/5 items-center justify-center mx-auto ">
       {/* Biography Directly Below (Fixes White Space Issue) */}
       <Reveal className="h-full">
-        <div className={`p-8 bg-white text-black`}>
-          <h3 className="text-4xl font-bold">Biography</h3>
-          <p className="text-xl mt-4">
+        <div className={`p-8 px-4 bg-white text-black`}>
+          <h3 className="text-2xl sm:text-4xl font-bold">Biography</h3>
+          <p className="mt-4 sm:text-xl">
             {bio}
           </p>
         </div>
       </Reveal>
-      
+
       <Reveal className="h-full">
-      <div className="flex flex-col justify-between p-8 bg-white text-black">
-        <h3 className="text-4xl font-bold mb-4">Profile</h3>
-        <div>
-        <p className="text-2xl ">{name} <strong> ({nickname})</strong></p>
-          <p className="text-2xl font-semibold mt-3"> Education </p>
-          <p className="text-xl mt-1">1. {degree}, {school}</p>
-          {other_programs ?
-            <p className="text-xl mt-1">2. {other_programs}</p> : null
-          }
-          <p className="text-2xl font-semibold mt-3"> Career Interests </p>
-          <p className="text-xl">{interests}</p>
-          <p className="text-2xl font-semibold mt-3"> Area of Expertise </p>
-          <p className="text-xl">{expertise}</p>
+        <div className="flex flex-col justify-between p-8 px-4 bg-white text-black">
+          <h3 className="text-2xl sm:text-4xl font-bold mb-2">Profile</h3>
+          <div>
+            <p className="text-xl sm:text-2xl ">{name} <strong> ({nickname})</strong></p>
+            <p className="text-lg sm:text-2xl font-semibold mt-3"> Education </p>
+            <p className="sm:text-xl mt-1">1. {degree}, {school}</p>
+            {other_programs ?
+              <p className="sm:text-xl mt-1">2. {other_programs}</p> : null
+            }
+            <p className="text-lg sm:text-2xl font-semibold mt-3"> Career Interests </p>
+            <p className="sm:text-xl">{interests}</p>
+            <p className="text-lg sm:text-2xl font-semibold mt-3"> Area of Expertise </p>
+            <p className="sm:text-xl">{expertise}</p>
+          </div>
         </div>
-      </div>
       </Reveal>
-      
+
       <Reveal className="h-full">
-      <div className={`p-8 bg-white text-black rounded-b-lg`}>
-        <h3 className="text-4xl font-bold mb-4">Research Projects</h3>
-        {research_projects.length > 0 ? (
-          <ol className="mt-2 space-y-3 list-decimal list-inside">
-            {research_projects.map((research, index) => (
-              <li key={index} className="text-xl">{research}</li>
-            ))}
-          </ol>
-        ) : (
-          <p className="italic text-gray-700">No research projects listed.</p>
-        )}
-      </div>
+        <div className={`p-8 px-4 bg-white text-black rounded-b-lg`}>
+          <h3 className="text-2xl sm:text-4xl font-bold mb-4">Research Projects</h3>
+          {research_projects.length > 0 ? (
+            <ol className="mt-2 space-y-3 list-decimal list-inside">
+              {research_projects.map((research, index) => (
+                <li key={index} className="sm:text-xl">{research}</li>
+              ))}
+            </ol>
+          ) : (
+            <p className="italic text-gray-700">No research projects listed.</p>
+          )}
+        </div>
       </Reveal>
     </div>
   );
