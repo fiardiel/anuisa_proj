@@ -7,7 +7,6 @@ import MembersDescription from '@/components/members/MembersDescription'
 export interface MemberProfileProps {
     name: string;
     nickname: string;
-    uniId: string;
     degree: string;
     school: string;
     college: string;
@@ -25,7 +24,6 @@ export interface MemberProfileProps {
 const MemberProfile: React.FC<MemberProfileProps> = ({
     name,
     nickname,
-    uniId,
     degree,
     school,
     other_programs,
@@ -49,7 +47,7 @@ const MemberProfile: React.FC<MemberProfileProps> = ({
             />
             <MembersDescription
                 nickname={nickname}
-                uniId={uniId}
+                name={name}
                 degree={degree}
                 school={school}
                 other_programs={other_programs}
