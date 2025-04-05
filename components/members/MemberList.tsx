@@ -71,7 +71,7 @@ const MemberList: React.FC<MemberListProps> = ({ members }) => {
 
       {/* Filtered Members */}
       <div className="grid lg:grid-cols-2 2xl:grid-cols-3 gap-x-16 gap-y-6 md:gap-y-14">
-        {filteredMembers.map((member, index) => (
+        {filteredMembers.map((member) => (
           <div key={member.identifier}>
             <Reveal className='h-full'>
               <MemberCard

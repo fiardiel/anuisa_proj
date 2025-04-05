@@ -8,7 +8,6 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import ProfileImage from '../ui/ProfileImage';
-import Image from 'next/image'
 import { Button } from '../ui/button';
 import { Eye } from 'lucide-react';
 
