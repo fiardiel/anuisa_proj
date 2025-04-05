@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
             </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col justify-between items-start">
+        <div className="border-t border-[#BE830E] mt-8 pt-8 flex flex-col justify-between items-start">
             <div className="text-2xl text-[#BE830E] font-medium pb-4">
                 Acknowledgement of Country
             </div>
@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
           
         </div>
         
-        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-[#BE830E] mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-sm text-gray-400">
             © {currentYear} ANUISA. All rights reserved.
           </div>
