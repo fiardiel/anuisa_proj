@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
                     </Link>
                   </li>
                   <li className="flex justify-center items-center ml-4">
-                    <Link
+                    <a
                       href="mailto:anu@ppi-australia.org"
                       className="flex items-center justify-center hover:text-gray-300 transition"
                     >
@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
                         width={50}
                         height={50}
                       />
-                    </Link>
+                    </a>
                   </li>
                 </ul>
             </div>
