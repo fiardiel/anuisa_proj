@@ -39,9 +39,22 @@ const Footer: React.FC = () => {
                       <Image src="/icons8-instagram.svg" alt="Instagram logo" width={50} height={50} />
                     </Link>
                   </li>
-                  <li>
+                  <li className="flex justify-center items-center">
                     <Link href="https://www.linkedin.com/company/ppia-anu-anuisa/" className="hover:text-gray-300 transition">
-                      <Image src="/icons8-linkedin.svg" alt="LinkedIn logo" width={50} height={50} />
+                      <Image src="/icons8-linkedin.svg" alt="LinkedIn logo" width={45} height={45} />
+                    </Link>
+                  </li>
+                  <li className="flex justify-center items-center ml-4">
+                    <Link
+                      href="mailto:anu@ppi-australia.org"
+                      className="flex items-center justify-center hover:text-gray-300 transition"
+                    >
+                      <Image
+                        src="/email.svg"
+                        alt="Email icon"
+                        width={50}
+                        height={50}
+                      />
                     </Link>
                   </li>
                 </ul>
