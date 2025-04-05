@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
             <div className="text-2xl text-[#BE830E] font-medium pb-4">
                 Acknowledgement of Country
             </div>
-            <div className="text-xl text-[#BE830E]">
+            <div className="text-xl text-white">
                 The Australian National University Indonesian Students&apos; Association acknowledges, celebrates and pays our respects to the Ngunnawal and Ngambri people of the Canberra region and to all First Nations Australians on whose traditional lands we meet and work, and whose cultures are among the oldest continuing cultures in human history.
             </div>
           
