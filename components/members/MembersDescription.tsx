@@ -1,6 +1,8 @@
 "use client";
 
 import React from "react";
+import Reveal from "../utils/Reveal";
+
 export interface MembersDescriptionProps {
   nickname: string;
   uniId: string;
@@ -27,13 +29,16 @@ const MembersDescription: React.FC<MembersDescriptionProps> = ({
   return (
     <div className="w-4/5 md:w-3/5 items-center justify-center mx-auto ">
       {/* Biography Directly Below (Fixes White Space Issue) */}
-      <div className={`p-8 bg-white text-black`}>
-        <h3 className="text-4xl font-bold">Biography</h3>
-        <p className="text-xl mt-4">
-          {bio}
-        </p>
-      </div>
-
+      <Reveal className="h-full">
+        <div className={`p-8 bg-white text-black`}>
+          <h3 className="text-4xl font-bold">Biography</h3>
+          <p className="text-xl mt-4">
+            {bio}
+          </p>
+        </div>
+      </Reveal>
+      
+      <Reveal className="h-full">
       <div className="flex flex-col justify-between p-8 bg-white text-black">
         <h3 className="text-4xl font-bold mb-4">Profile</h3>
         <div>
@@ -49,7 +54,9 @@ const MembersDescription: React.FC<MembersDescriptionProps> = ({
           <p className="text-xl">{expertise}</p>
         </div>
       </div>
-
+      </Reveal>
+      
+      <Reveal className="h-full">
       <div className={`p-8 bg-white text-black rounded-b-lg`}>
         <h3 className="text-4xl font-bold mb-4">Research Projects</h3>
         {research_projects.length > 0 ? (
@@ -62,6 +69,7 @@ const MembersDescription: React.FC<MembersDescriptionProps> = ({
           <p className="italic text-gray-700">No research projects listed.</p>
         )}
       </div>
+      </Reveal>
     </div>
   );
 };
