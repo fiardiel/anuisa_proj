@@ -26,7 +26,7 @@ const Navbar = () => {
         <div>
           <div className='block sm:hidden'>
             <Drawer direction="top">
-              <DrawerTrigger className="relative flex h-10 flex-shrink-0 items-center justify-center gap-2 overflow-hidden rounded-full px-4 text-sm font-medium shadow-sm bg-white dark:text-white">
+              <DrawerTrigger className="relative flex h-10 flex-shrink-0 items-center justify-center gap-2 overflow-hidden rounded-full px-4 text-sm font-medium shadow-sm text-white">
                 <Menu />
               </DrawerTrigger>
               <DrawerOverlay className="fixed inset-0 bg-black/40 transition-all duration-500 ease-in-out" />
@@ -46,14 +46,14 @@ const Navbar = () => {
               </DrawerContent>
             </Drawer>
           </div>
-            <div className='hidden sm:flex'>
-              <Button asChild variant={'link'} className='text-lg font-sm text-white'>
-                <Link href={'/events'}>Highlights</Link>
-              </Button>
-              <Button asChild variant={'link'} className='text-lg font-sm text-white'>
-                <Link href={'/aboutus'}>About Us</Link>
-              </Button>
-            </div>
+          <div className='hidden sm:flex'>
+            <Button asChild variant={'link'} className='text-lg font-sm text-white'>
+              <Link href={'/events'}>Highlights</Link>
+            </Button>
+            <Button asChild variant={'link'} className='text-lg font-sm text-white'>
+              <Link href={'/aboutus'}>About Us</Link>
+            </Button>
+          </div>
         </div>
       </div>
     </div>

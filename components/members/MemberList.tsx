@@ -30,7 +30,7 @@ const MemberList: React.FC<MemberListProps> = ({ members }) => {
   return (
     <div className="px-4">
       {/* Mobile Filter Button + Drawer */}
-      <div className="sm:hidden flex justify-center mb-4 mt-4">
+      <div className="sm:hidden flex justify-center mb-8 mt-4">
         <Drawer direction="top">
           <DrawerTrigger asChild>
             <Button className="flex items-center gap-2">
@@ -53,7 +53,7 @@ const MemberList: React.FC<MemberListProps> = ({ members }) => {
       </div>
 
       {/* Filters Inline for Tablet and Up */}
-      <div className="hidden sm:flex justify-center mb-6">
+      <div className="hidden sm:flex justify-center mb-6 mt-6">
         <FilterControls
           degree={degree}
           setDegree={setDegree}
@@ -70,16 +70,16 @@ const MemberList: React.FC<MemberListProps> = ({ members }) => {
       )}
 
       {/* Filtered Members */}
-      <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-x-16 gap-y-14">
+      <div className="grid lg:grid-cols-2 2xl:grid-cols-3 gap-x-16 gap-y-6 md:gap-y-14">
         {filteredMembers.map((member, index) => (
           <div key={member.uni_id}>
-            <Reveal>
-              <MemberCard 
-                color={index % 2 === 0 ? 'blue' : 'orange'} 
-                uni_id={member.uni_id} 
-                image={member.profile_picture_url} 
-                full_name={member.full_name} 
-                program={member.program} 
+            <Reveal className='h-full'>
+              <MemberCard
+                color={index % 2 === 0 ? 'blue' : 'orange'}
+                uni_id={member.uni_id}
+                image={member.profile_picture_url}
+                full_name={member.full_name}
+                program={member.program}
               />
             </Reveal>
           </div>

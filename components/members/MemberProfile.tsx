@@ -20,7 +20,7 @@ export interface MemberProfileProps {
     bio: string;
     research_projects: string[]; // Array of research titles
     profilePictureUrl?: string;
-  }
+}
 
 const MemberProfile: React.FC<MemberProfileProps> = ({
     name,
@@ -28,7 +28,6 @@ const MemberProfile: React.FC<MemberProfileProps> = ({
     uniId,
     degree,
     school,
-    college,
     other_programs,
     interests,
     expertise,
@@ -38,33 +37,32 @@ const MemberProfile: React.FC<MemberProfileProps> = ({
     bio,
     research_projects,
     profilePictureUrl,
-  }) => {
+}) => {
     return (
-      <div className="w-full">
-        <MembersImage 
-            name={name}
-            email={email}
-            instagram={instagram}
-            linkedin={linkedin}
-            profilePictureUrl={profilePictureUrl}
-          />
-        
-        <MembersDescription
-            nickname={nickname}
-            uniId={uniId}
-            degree={degree}
-            school={school}
-            college={college}
-            other_programs={other_programs}
-            interests={interests}
-            expertise={expertise}
-            bio={bio}
-            research_projects={research_projects}
-          />
-        
-      </div>
+        <div className="w-full">
+            <MembersImage
+                name={name}
+                email={email}
+                instagram={instagram}
+                linkedin={linkedin}
+                profilePictureUrl={profilePictureUrl}
+            />
+
+            <MembersDescription
+                nickname={nickname}
+                uniId={uniId}
+                degree={degree}
+                school={school}
+                other_programs={other_programs}
+                interests={interests}
+                expertise={expertise}
+                bio={bio}
+                research_projects={research_projects}
+            />
+
+        </div>
     );
-  };
-  
+};
+
 
 export default MemberProfile;
