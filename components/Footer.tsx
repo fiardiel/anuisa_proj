@@ -27,8 +27,8 @@ const Footer: React.FC = () => {
           
           
             <div>
-                <h3 className="text-2xl text-[#BE830E] font-semibold mb-4">Socials</h3>
-                <ul className="flex space-x-4 text-xl">
+                <h3 className="text-2xl text-[#BE830E] font-semibold mb-4">Connect</h3>
+                <ul className="flex space-x-6 text-xl">
                   <li>
                     <Link href="https://www.facebook.com/ppiaanu/" className="hover:text-gray-300 transition">
                       <Image src="/icons8-facebook-240.svg" alt="Facebook logo" width={50} height={50} />
@@ -39,16 +39,29 @@ const Footer: React.FC = () => {
                       <Image src="/icons8-instagram.svg" alt="Instagram logo" width={50} height={50} />
                     </Link>
                   </li>
-                  <li>
+                  <li className="flex justify-center items-center">
                     <Link href="https://www.linkedin.com/company/ppia-anu-anuisa/" className="hover:text-gray-300 transition">
-                      <Image src="/icons8-linkedin.svg" alt="LinkedIn logo" width={50} height={50} />
+                      <Image src="/icons8-linkedin.svg" alt="LinkedIn logo" width={45} height={45} />
                     </Link>
+                  </li>
+                  <li className="flex justify-center items-center pl-2">
+                    <a
+                      href="mailto:anu@ppi-australia.org"
+                      className="flex items-center justify-center hover:text-gray-300 transition"
+                    >
+                      <Image
+                        src="/email.svg"
+                        alt="Email icon"
+                        width={50}
+                        height={50}
+                      />
+                    </a>
                   </li>
                 </ul>
             </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col justify-between items-start">
+        <div className="border-t border-[#BE830E] mt-8 pt-8 flex flex-col justify-between items-start">
             <div className="text-2xl text-[#BE830E] font-medium pb-4">
                 Acknowledgement of Country
             </div>
@@ -58,7 +71,7 @@ const Footer: React.FC = () => {
           
         </div>
         
-        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-[#BE830E] mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-sm text-gray-400">
             © {currentYear} ANUISA. All rights reserved.
           </div>
