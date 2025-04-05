@@ -16,8 +16,8 @@ const Footer: React.FC = () => {
 
 
             <div>
-                <h3 className="text-xl font-medium mb-4">ANUISA</h3>
-                <ul className="space-y-2">
+                <h3 className="text-2xl text-[#BE830E] font-semibold mb-4">ANUISA</h3>
+                <ul className="space-y-2 text-xl">
                 <li><Link href="/" className="hover:text-gray-300 transition">Home</Link></li>
                 <li><Link href="/aboutus" className="hover:text-gray-300 transition">About Us</Link></li>
                 <li><Link href="/events" className="hover:text-gray-300 transition">Highlights</Link></li>
@@ -27,8 +27,8 @@ const Footer: React.FC = () => {
           
           
             <div>
-                <h3 className="text-xl font-medium mb-4">Socials</h3>
-                <ul className="space-y-2">
+                <h3 className="text-2xl text-[#BE830E] font-semibold mb-4">Socials</h3>
+                <ul className="space-y-2 text-xl">
                     <li><Link href="https://www.facebook.com/ppiaanu/" className="hover:text-gray-300 transition">Facebook</Link></li>
                     <li><Link href="https://www.instagram.com/ppiaanu/" className="hover:text-gray-300 transition">Instagram</Link></li>
                     <li><Link href="https://www.linkedin.com/company/ppia-anu-anuisa/" className="hover:text-gray-300 transition">LinkedIn</Link></li>              
@@ -38,11 +38,11 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col justify-between items-start">
-            <div className="text-xl text-white font-medium pb-4">
+            <div className="text-2xl text-[#BE830E] font-medium pb-4">
                 Acknowledgement of Country
             </div>
-            <div className="text-l text-white">
-                The Australian National University acknowledges, celebrates and pays our respects to the Ngunnawal and Ngambri people of the Canberra region and to all First Nations Australians on whose traditional lands we meet and work, and whose cultures are among the oldest continuing cultures in human history.
+            <div className="text-xl text-[#BE830E]">
+                The Australian National University Indonesian Students' Association acknowledges, celebrates and pays our respects to the Ngunnawal and Ngambri people of the Canberra region and to all First Nations Australians on whose traditional lands we meet and work, and whose cultures are among the oldest continuing cultures in human history.
             </div>
           
         </div>
