@@ -8,7 +8,7 @@ export interface MembersDescriptionProps {
   name: string;
   degree: string;
   school: string;
-  other_programs: string;
+  other_programs: string[];
   interests: string;
   expertise: string;
   bio: string;
@@ -44,10 +44,16 @@ const MembersDescription: React.FC<MembersDescriptionProps> = ({
           <div>
             <p className="text-xl sm:text-2xl ">{name} <strong> ({nickname})</strong></p>
             <p className="text-lg sm:text-2xl font-semibold mt-3"> Education </p>
-            <p className="sm:text-xl mt-1">1. {degree}, {school}</p>
-            {other_programs ?
-              <p className="sm:text-xl mt-1">2. {other_programs}</p> : null
-            }
+            {other_programs.length > 0 && (
+              <div>
+                <ol className="list-decimal list-inside sm:text-xl mt-1 space-y-1">
+                  <li key='1'>{degree}, {school}</li>
+                  {other_programs.map((program, index) => (
+                    <li key={index+1}>{program}</li>
+                  ))}
+                </ol>
+              </div>
+            )}
             <p className="text-lg sm:text-2xl font-semibold mt-3"> Career Interests </p>
             <p className="sm:text-xl">{interests}</p>
             <p className="text-lg sm:text-2xl font-semibold mt-3"> Area of Expertise </p>

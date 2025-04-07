@@ -8,7 +8,7 @@ const fetchMember = async (identifier: string): Promise<MemberProfileProps | nul
     // Fetch the member profile
     const { data: profileData, error: profileError } = await supabase
       .from('profile')
-      .select('full_name, nickname, identifier, program, school, college, other_degrees, career_interests, expertise, email, instagram, linkedin, bio, invalid_photo')
+      .select('full_name, nickname, identifier, program, school, college, career_interests, expertise, email, instagram, linkedin, bio, invalid_photo')
       .eq('identifier', identifier)
       .single()
 
@@ -21,7 +21,13 @@ const fetchMember = async (identifier: string): Promise<MemberProfileProps | nul
       .select('research')
       .eq('researcher', identifier)
 
+    const {data: other_programData, error: other_programError} = await supabase
+      .from('other_programs')
+      .select('other_program')
+      .eq('student', identifier)
+
     if (researchError) throw researchError
+    if (other_programError) throw other_programError
 
     return {
       name: profileData.full_name,
@@ -29,7 +35,7 @@ const fetchMember = async (identifier: string): Promise<MemberProfileProps | nul
       degree: profileData.program,
       school: profileData.school,
       college: profileData.college,
-      other_programs: profileData.other_degrees,
+      other_programs: other_programData.map((o) => o.other_program),
       interests: profileData.career_interests,
       expertise: profileData.expertise,
       email: profileData.email,

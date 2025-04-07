@@ -10,14 +10,14 @@ export interface MemberProfileProps {
     degree: string;
     school: string;
     college: string;
-    other_programs: string;
+    other_programs: string[];
     interests: string;
     expertise: string;
     email: string;
     instagram?: string;
     linkedin?: string;
     bio: string;
-    research_projects: string[]; // Array of research titles
+    research_projects: string[]; 
     profilePictureUrl?: string;
 }
 
