@@ -35,7 +35,7 @@ export default async function Home() {
             </p>
           </div>
           <p className="mt-10 lg:w-3/5 w-4/5 text-2xl text-white">
-            Through this platform, <span className="text-[#BF872B] font-bold italic">ANUISA</span> seeks to connect Indonesian talents within the ANU community to industry and beyond, while fostering employability and idea exchange.
+            Through this platform, <span className="text-[#BF872B] font-bold">ANUISA</span> seeks to connect Indonesian talents within the ANU community to industry and beyond, while fostering employability and idea exchange.
           </p>
         </div>
       </div>
