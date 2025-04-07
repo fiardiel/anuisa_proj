@@ -13,7 +13,6 @@ const highlights = [
   { src: '/highlight6.jpg' },
   { src: '/highlight7.jpg' },
 ];
-
 const Highlights = () => {
   return (
     <section className="mb-0 py-20 px-10 bg-gradient-to-b from-black via-gray-900 to-black min-h-screen">
