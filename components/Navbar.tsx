@@ -36,7 +36,7 @@ const Navbar = () => {
                 <div className="p-8 flex flex-col justify-between items-center">
                   <div className="max-w-md mx-auto">
                     <Button asChild variant={'link'} className='text-lg font-medium'>
-                      <Link href={'/events'}>Highlights</Link>
+                      <Link href={'/highlights'}>Highlights</Link>
                     </Button>
                     <Button asChild variant={'link'} className='text-lg font-medium'>
                       <Link href={'/aboutus'}>About Us</Link>
@@ -48,7 +48,7 @@ const Navbar = () => {
           </div>
           <div className='hidden sm:flex'>
             <Button asChild variant={'link'} className='text-lg font-sm text-white'>
-              <Link href={'/events'}>Highlights</Link>
+              <Link href={'/highlights'}>Highlights</Link>
             </Button>
             <Button asChild variant={'link'} className='text-lg font-sm text-white'>
               <Link href={'/aboutus'}>About Us</Link>
