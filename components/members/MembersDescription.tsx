@@ -44,7 +44,7 @@ const MembersDescription: React.FC<MembersDescriptionProps> = ({
           <div>
             <p className="text-xl sm:text-2xl ">{name} <strong> ({nickname})</strong></p>
             <p className="text-lg sm:text-2xl font-semibold mt-3"> Education </p>
-            {other_programs.length > 0 && (
+            {other_programs.length > 0 ? (
               <div>
                 <ol className="list-decimal list-inside sm:text-xl mt-1 space-y-1">
                   <li key='1'>{degree}, {school}</li>
@@ -52,6 +52,12 @@ const MembersDescription: React.FC<MembersDescriptionProps> = ({
                     <li key={index+1}>{program}</li>
                   ))}
                 </ol>
+              </div>
+            ) : (
+              <div>
+                <ol className="list-decimal list-inside sm:text-xl mt-1 space-y-1">
+                  <li key='1'>{degree}, {school}</li>
+                  </ol>
               </div>
             )}
             <p className="text-lg sm:text-2xl font-semibold mt-3"> Career Interests </p>
