@@ -3,23 +3,15 @@
 import React from 'react';
 import Image from 'next/image';
 import Reveal from '../../components/utils/Reveal';
-import highlight1 from '@/public/highlight1.jpg';
-import highlight2 from '@/public/highlight2.jpg';
-import highlight3 from '@/public/highlight3.jpg';
-import highlight4 from '@/public/highlight4.jpg';
-import highlight5 from '@/public/highlight5.jpg';
-import highlight6 from '@/public/highlight6.jpg';
-import highlight7 from '@/public/highlight7.jpg';
 
 const highlights = [
-  { src: highlight1 },
-  { src: highlight2 },
-  { src: highlight3 },
-  { src: highlight4 },
-  { src: highlight5 },
-  { src: highlight6 },
-  { src: highlight7 },
-  
+  { src: '/highlight1.jpg' },
+  { src: '/highlight2.jpg' },
+  { src: '/highlight3.jpg' },
+  { src: '/highlight4.jpg' },
+  { src: '/highlight5.jpg' },
+  { src: '/highlight6.jpg' },
+  { src: '/highlight7.jpg' },
 ];
 
 const Highlights = () => {
