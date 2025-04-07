@@ -31,7 +31,7 @@ export default function About() {
 
       <div className="flex bg-black py-7 px-10">
         <p className="text-white">
-            <span className="text-[#BF872B] font-bold">ANUISA (ANU Indonesian Students' Association)</span> is a student-led organization at the Australian National University (ANU) that serves as a community for Indonesian students and anyone interested in Indonesian culture, society, and issues. ANUISA provides a platform for students to connect, support each other, and celebrate Indonesia's rich traditions while also fostering academic and professional development.
+            <span className="text-[#BF872B] font-bold">ANUISA (ANU Indonesian Students`&apos;` Association)</span> is a student-led organization at the Australian National University (ANU) that serves as a community for Indonesian students and anyone interested in Indonesian culture, society, and issues. ANUISA provides a platform for students to connect, support each other, and celebrate Indonesia`&apos;`s rich traditions while also fostering academic and professional development.
         </p>
       </div>
         
@@ -62,7 +62,7 @@ export default function About() {
           The organization also collaborates with other student organizations, the Indonesian embassy, and professional networks to offer career development opportunities, academic discussions, and advocacy for Indonesian students.
           </p>
           <p>
-          Whether you're an Indonesian student at ANU or simply passionate about Indonesia, <span className="text-[#BF872B] font-bold">ANUISA</span> welcomes everyone to be part of this vibrant and inclusive community!
+          Whether you`&apos;`re an Indonesian student at ANU or simply passionate about Indonesia, <span className="text-[#BF872B] font-bold">ANUISA</span> welcomes everyone to be part of this vibrant and inclusive community!
           </p>
         </div>
       </div>
