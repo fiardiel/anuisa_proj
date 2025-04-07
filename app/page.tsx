@@ -21,7 +21,7 @@ export default async function Home() {
               Australian National University
             </p>
             <p className="text-2xl sm:text-3xl font-bold text-white">
-              Indonesian Students Association
+              Indonesian Students&apos; Association
             </p>
           </div>
         </div>
@@ -31,7 +31,7 @@ export default async function Home() {
               Australian National University
             </p>
             <p className="text-5xl font-bold text-white">
-              Indonesian Students Association
+              Indonesian Students&apos; Association
             </p>
           </div>
           <p className="mt-10 lg:w-3/5 w-4/5 text-2xl text-white">

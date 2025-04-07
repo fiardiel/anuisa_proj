@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Meet Indonesian Talents at ANU",
   description: "ANUISA",
-  icons: "/logo-bw.png",
+  icons: "/favicon.ico",
 };
 
 export default function RootLayout({
