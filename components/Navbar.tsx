@@ -46,12 +46,15 @@ const Navbar = () => {
               </DrawerContent>
             </Drawer>
           </div>
-          <div className='hidden sm:flex'>
+          <div className='hidden sm:flex gap-5'>
             <Button asChild variant={'link'} className='text-lg font-sm text-white'>
               <Link href={'/highlights'}>Highlights</Link>
             </Button>
             <Button asChild variant={'link'} className='text-lg font-sm text-white'>
               <Link href={'/aboutus'}>About Us</Link>
+            </Button>
+            <Button asChild className='text-lg bg-[#BF872B] hover:bg-opacity-80 font-sm py-5 text-white'>
+              <Link href={'https://docs.google.com/forms/d/e/1FAIpQLSdc8MmaXN2Naab0WfXTPHnrtJyce39mwGNTmNAn33RBTXCe3w/closedform'}>Join Us!</Link>
             </Button>
           </div>
         </div>
