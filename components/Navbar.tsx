@@ -41,6 +41,9 @@ const Navbar = () => {
                     <Button asChild variant={'link'} className='text-lg font-medium'>
                       <Link href={'/aboutus'}>About Us</Link>
                     </Button>
+                    <Button asChild variant={'link'} className='text-lg font-medium'>
+                      <Link href={'https://docs.google.com/forms/d/e/1FAIpQLSdc8MmaXN2Naab0WfXTPHnrtJyce39mwGNTmNAn33RBTXCe3w/closedform'}>Join Us</Link>
+                    </Button>
                   </div>
                 </div>
               </DrawerContent>
