@@ -16,6 +16,7 @@ export interface MemberProfileProps {
     email: string;
     instagram?: string;
     linkedin?: string;
+    orcid?: string;
     bio: string;
     research_projects: string[]; 
     profilePictureUrl?: string;
@@ -32,6 +33,7 @@ const MemberProfile: React.FC<MemberProfileProps> = ({
     email,
     instagram,
     linkedin,
+    orcid,
     bio,
     research_projects,
     profilePictureUrl,
@@ -43,6 +45,7 @@ const MemberProfile: React.FC<MemberProfileProps> = ({
                 email={email}
                 instagram={instagram}
                 linkedin={linkedin}
+                orcid={orcid}
                 profilePictureUrl={profilePictureUrl}
             />
             <MembersDescription
