@@ -9,6 +9,7 @@ export interface MemberImageProps {
     email: string;
     instagram?: string;
     linkedin?: string;
+    orcid?: string;
     profilePictureUrl?: string;
 }
 
@@ -17,6 +18,7 @@ const MemberImage: React.FC<MemberImageProps> = ({
     email,
     instagram,
     linkedin,
+    orcid,
     profilePictureUrl,
 }) => {
     return (
@@ -56,6 +58,11 @@ const MemberImage: React.FC<MemberImageProps> = ({
                         {linkedin && (
                             <a href={linkedin} target="_blank" rel="noopener noreferrer">
                                 <Image src="/LinkedIn-Icon.png" alt="LinkedIn" width={50} height={50} />
+                            </a>
+                        )}
+                        {orcid && (
+                            <a href={orcid} target="_blank" rel="noopener noreferrer">
+                                <Image src="/Orcid-Icon.png" alt="Orcid" width={50} height={50} />
                             </a>
                         )}
                     </div>
