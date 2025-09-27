@@ -36,9 +36,6 @@ const Navbar = () => {
                 <div className="p-8 flex flex-col justify-between items-center">
                   <div className="max-w-md mx-auto">
                     <Button asChild variant={'link'} className='text-base font-medium'>
-                      <Link href={'/'}>Talent Hub</Link>
-                    </Button>
-                    <Button asChild variant={'link'} className='text-base font-medium'>
                       <Link href={'/highlights'}>Highlights</Link>
                     </Button>
                     <Button asChild variant={'link'} className='text-base font-medium'>
