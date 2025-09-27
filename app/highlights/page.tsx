@@ -10,7 +10,20 @@ const highlights = [
   { src: '/7.JPG' },
 ];
 
-const eventSections = [
+// Define proper types
+interface EventItem {
+  title: string;
+  youtubeId?: string;
+  description: string;
+  eventLink?: string;
+}
+
+interface EventSection {
+  title: string;
+  items: EventItem[];
+}
+
+const eventSections: EventSection[] = [
   {
     title: "ANUISA Expert Series",
     items: [
@@ -212,7 +225,7 @@ const VideoItem = ({ title, youtubeId, description, eventLink }: { title: string
   );
 };
 
-const EventSection = ({ title, items }: { title: string; items: any[] }) => {
+const EventSection = ({ title, items }: { title: string; items: EventItem[] }) => {
   return (
     <Reveal>
       <div className="mb-16 mt-16">
