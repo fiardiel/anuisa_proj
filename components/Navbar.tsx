@@ -35,13 +35,16 @@ const Navbar = () => {
               >
                 <div className="p-8 flex flex-col justify-between items-center">
                   <div className="max-w-md mx-auto">
-                    <Button asChild variant={'link'} className='text-lg font-medium'>
+                    <Button asChild variant={'link'} className='text-base font-medium'>
+                      <Link href={'/'}>Talent Hub</Link>
+                    </Button>
+                    <Button asChild variant={'link'} className='text-base font-medium'>
                       <Link href={'/highlights'}>Highlights</Link>
                     </Button>
-                    <Button asChild variant={'link'} className='text-lg font-medium'>
+                    <Button asChild variant={'link'} className='text-base font-medium'>
                       <Link href={'/aboutus'}>About Us</Link>
                     </Button>
-                    <Button asChild variant={'link'} className='text-lg font-medium'>
+                    <Button asChild variant={'link'} className='text-base font-medium justify-center'>
                       <Link href={'https://docs.google.com/forms/d/e/1FAIpQLSdc8MmaXN2Naab0WfXTPHnrtJyce39mwGNTmNAn33RBTXCe3w/closedform'}>Join Us</Link>
                     </Button>
                   </div>
@@ -50,6 +53,9 @@ const Navbar = () => {
             </Drawer>
           </div>
           <div className='hidden sm:flex gap-5'>
+            <Button asChild variant={'link'} className='text-lg font-sm text-white'>
+              <Link href={'/'}>Talent Hub</Link>
+            </Button>
             <Button asChild variant={'link'} className='text-lg font-sm text-white'>
               <Link href={'/highlights'}>Highlights</Link>
             </Button>

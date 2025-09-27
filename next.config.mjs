@@ -6,6 +6,12 @@ const nextConfig = {
           protocol: 'https',
           hostname: 'qcjsnfklkapuequkkdvh.supabase.co',
         },
+        {
+          protocol: 'https',
+          hostname: 'img.youtube.com',
+          port: '',
+          pathname: '/vi/**',
+        },
       ],
     },
   };
